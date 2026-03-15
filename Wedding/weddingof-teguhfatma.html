@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Undangan Pernikahan – Teguh & Fatma</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ===== FIXED VIDEO BACKGROUND ===== -->
+  <div class="bg-video-wrap">
+    <video autoplay muted loop playsinline>
+      <source src="Background.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- AUDIO MUSIK -->
+  <audio id="music" loop>
+    <source src="videoplayback.mp4" type="audio/mpeg">
+  </audio>
+
+  <!-- TOMBOL MUSIK -->
+  <div class="music-btn" id="musicBtn" onclick="toggleMusic()">
+    <i class="fas fa-music" id="musicIcon"></i>
+  </div>
+
+  <!-- ============================= HERO ============================= -->
+  <section class="hero" id="hero">
+    <div class="hero-stars" id="heroStars"></div>
+    <div class="hero-glow g1"></div>
+    <div class="hero-glow g2"></div>
+    <div class="hero-glow g3"></div>
+
+    <div class="hero-content">
+      <div class="hero-pretitle">
+        <span class="pre-line"></span>
+        <span>The Wedding Invitation</span>
+        <span class="pre-line"></span>
+      </div>
+
+      <div class="hero-names-row">
+        <div class="h-name left">
+          <h1 class="name-big">Teguh</h1>
+          <p class="name-full">Teguh Aji Pratama</p>
+        </div>
+        <div class="h-amp">
+          <div class="amp-wrap">
+            <div class="amp-ring outer"></div>
+            <div class="amp-ring inner"></div>
+            <span class="amp-char">&amp;</span>
+          </div>
+        </div>
+        <div class="h-name right">
+          <h1 class="name-big">Fatma</h1>
+          <p class="name-full">Fatma Yanti (Ipat)</p>
+        </div>
+      </div>
+
+      <div class="hero-orn">
+        <svg width="320" height="16" viewBox="0 0 320 16">
+          <line x1="0" y1="8" x2="130" y2="8" stroke="rgba(205,170,128,0.25)" stroke-width="0.8"/>
+          <circle cx="140" cy="8" r="2" fill="rgba(205,170,128,0.5)"/>
+          <circle cx="150" cy="8" r="4" fill="none" stroke="rgba(205,170,128,0.6)" stroke-width="1"/>
+          <circle cx="160" cy="8" r="2" fill="rgba(205,170,128,0.5)"/>
+          <line x1="170" y1="8" x2="320" y2="8" stroke="rgba(205,170,128,0.25)" stroke-width="0.8"/>
+        </svg>
+      </div>
+
+      <div class="hero-datebox">
+        <div class="hd-item"><span class="hd-big">Minggu</span><span class="hd-sm">Hari</span></div>
+        <div class="hd-sep">|</div>
+        <div class="hd-item"><span class="hd-big">05 April</span><span class="hd-sm">Tanggal</span></div>
+        <div class="hd-sep">|</div>
+        <div class="hd-item"><span class="hd-big">2026</span><span class="hd-sm">Tahun</span></div>
+      </div>
+
+      <div class="hero-cd" id="countdown">
+        <div class="cd-box"><span id="cDays">00</span><small>Hari</small></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-box"><span id="cHours">00</span><small>Jam</small></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-box"><span id="cMins">00</span><small>Menit</small></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-box"><span id="cSecs">00</span><small>Detik</small></div>
+      </div>
+
+      <a href="#opening" class="btn-invite" onclick="toggleMusic()">
+        <i class="fas fa-envelope-open-text"></i>
+        <span>Buka Undangan</span>
+      </a>
+    </div>
+
+    <div class="hero-scroll-mouse">
+      <div class="mouse"><div class="mouse-wheel"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ============================= OPENING (berisi NAVBAR di atas) ============================= -->
+  <section class="opening" id="opening">
+
+    <!-- NAVBAR ada di sini, di dalam section Opening -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-logo">
+        <div class="logo-emblem">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="18.5" stroke="#cdaa80" stroke-width="1" opacity="0.7"/>
+            <circle cx="20" cy="20" r="13" stroke="#cdaa80" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.35"/>
+            <text x="20" y="16" text-anchor="middle" fill="#cdaa80" font-size="8" font-family="Playfair Display" font-style="italic">T</text>
+            <text x="20" y="24" text-anchor="middle" fill="rgba(205,170,128,0.5)" font-size="6" font-family="Playfair Display">&amp;</text>
+            <text x="20" y="32" text-anchor="middle" fill="#cdaa80" font-size="8" font-family="Playfair Display" font-style="italic">F</text>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-main">Teguh <em>&amp;</em> Fatma</span>
+          <span class="logo-sub">05 · 04 · 2026</span>
+        </div>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#opening" onclick="closeNav()">Pembuka</a></li>
+        <li><a href="#couple" onclick="closeNav()">Mempelai</a></li>
+        <li><a href="#event" onclick="closeNav()">Acara</a></li>
+        <li><a href="#gallery" onclick="closeNav()">Galeri</a></li>
+        <li><a href="#gift" onclick="closeNav()">Hadiah</a></li>
+      </ul>
+
+      <div class="nav-toggle" id="navToggle" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <!-- Konten Opening -->
+    <div class="opening-body">
+      <div class="op-left-deco"></div>
+      <div class="op-right-deco"></div>
+
+      <div class="opening-card reveal">
+        <div class="op-tag">Assalamu'alaikum Wr. Wb.</div>
+        <p class="bismillah">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ</p>
+        <div class="op-divider">
+          <span></span><i class="fas fa-star"></i><span></span>
+        </div>
+        <p class="op-text">
+          Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala,
+          kami bermaksud menyelenggarakan acara Walimatul Ursy putra-putri kami.
+          Tanpa mengurangi rasa hormat, kami mengundang Bapak / Ibu / Saudara / i
+          untuk hadir dan memberikan do'a restu kepada kedua mempelai.
+        </p>
+        <div class="op-quran">
+          <div class="op-quran-arabic">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</div>
+          <p class="op-quran-trans">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."</p>
+          <cite>— QS. Ar-Rum: 21</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= COUPLE ============================= -->
+  <section class="couple" id="couple">
+    <div class="couple-top-wave"></div>
+    <div class="container">
+      <div class="sec-head light">
+        <p class="sec-lbl">Mempelai</p>
+        <h2 class="sec-ttl">Kedua Mempelai</h2>
+        <div class="sec-div"></div>
+      </div>
+
+      <div class="couple-grid">
+
+        <!-- PRIA -->
+        <div class="cp-card reveal">
+          <div class="cp-photo-area">
+            <div class="cp-photo-ring">
+              <div class="cp-photo">
+                  <img src="8.jpg" alt="Teguh" style="width:100%;height:100%;object-fit:cover;"/>
+              </div>
+            </div>
+            <div class="cp-badge male"><i class="fas fa-mars"></i></div>
+          </div>
+          <div class="cp-flowers"><i class="fas fa-leaf"></i><i class="fas fa-leaf"></i><i class="fas fa-leaf"></i></div>
+          <h3 class="cp-name">Teguh Aji Pratama</h3>
+          <p class="cp-nick">" Teguh "</p>
+          <div class="cp-line"></div>
+          <div class="cp-family">
+            <p class="cp-from">Putra dari</p>
+            <p class="cp-parents"><i class="fas fa-user-tie"></i> Bpk. Sucipto</p>
+            <p class="cp-parents"><i class="fas fa-user"></i> Ibu Siti Fatimah</p>
+          </div>
+          <div class="cp-socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+
+        <!-- CENTER -->
+        <div class="cp-center reveal">
+          <div class="cp-heart-wrap">
+            <div class="cp-ring-1"></div>
+            <div class="cp-ring-2"></div>
+            <div class="cp-heart-icon"><i class="fas fa-heart"></i></div>
+          </div>
+          <p class="cp-unite">Bersatu dalam<br/>Ikatan Suci</p>
+          <div class="cp-date-tag">05 · 04 · 2026</div>
+        </div>
+
+        <!-- WANITA -->
+        <div class="cp-card reveal">
+          <div class="cp-photo-area">
+            <div class="cp-photo-ring">
+              <div class="cp-photo">
+                <img src="7.jpg" alt="Fatma" style="width:100%;height:100%;object-fit:cover;"/>
+              </div>
+            </div>
+            <div class="cp-badge female"><i class="fas fa-venus"></i></div>
+          </div>
+          <div class="cp-flowers"><i class="fas fa-leaf"></i><i class="fas fa-leaf"></i><i class="fas fa-leaf"></i></div>
+          <h3 class="cp-name">Fatma Yanti</h3>
+          <p class="cp-nick">" Fatma "</p>
+          <div class="cp-line"></div>
+          <div class="cp-family">
+            <p class="cp-from">Putri dari</p>
+            <p class="cp-parents"><i class="fas fa-user-tie"></i> Bpk. Saniman (Lek Man)</p>
+            <p class="cp-parents"><i class="fas fa-user"></i> Ibu Siti Fatimah</p>
+          </div>
+          <div class="cp-socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="couple-bot-wave"></div>
+  </section>
+
+  <!-- ============================= EVENT ============================= -->
+  <section class="event" id="event">
+    <div class="event-pattern"></div>
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-lbl">Jadwal</p>
+        <h2 class="sec-ttl">Detail Acara</h2>
+        <div class="sec-div"></div>
+      </div>
+
+      <div class="ev-grid">
+
+        <div class="ev-card reveal">
+          <div class="ev-top">
+            <div class="ev-icon-box"><i class="fas fa-ring"></i></div>
+            <div class="ev-badge">Akad Nikah</div>
+          </div>
+          <h3 class="ev-title">Ijab Qabul</h3>
+          <ul class="ev-list">
+            <li><i class="far fa-calendar-alt"></i><span>Minggu, 5 April 2026</span></li>
+            <li><i class="far fa-clock"></i><span>10.30 WITA</span></li>
+            <li><i class="fas fa-map-marker-alt"></i><span>Jl. Jendral Sudirman, Rt. 18<br/>Loa Kulu Kota, Gang Hijrah II</span></li>
+          </ul>
+          <a href="https://maps.app.goo.gl/VT9GvHJUoGC5tX9i8" target="_blank" class="btn-maps">
+            <i class="fas fa-location-dot"></i> Google Maps
+          </a>
+        </div>
+
+        <div class="ev-center-date reveal">
+          <div class="ev-big-circle">
+            <span class="ebc-day">05</span>
+            <span class="ebc-month">April</span>
+            <span class="ebc-year">2026</span>
+            <span class="ebc-loc">Loa Kulu Kota</span>
+          </div>
+        </div>
+
+        <div class="ev-card featured reveal">
+          <div class="ev-top">
+            <div class="ev-icon-box featured"><i class="fas fa-champagne-glasses"></i></div>
+            <div class="ev-badge featured">Resepsi</div>
+          </div>
+          <h3 class="ev-title">Walimatul Ursy</h3>
+          <ul class="ev-list">
+            <li><i class="far fa-calendar-alt"></i><span>Minggu, 5 April 2026</span></li>
+            <li><i class="far fa-clock"></i><span>11.00 – 18.00 WITA</span></li>
+            <li><i class="fas fa-map-marker-alt"></i><span>Jl. Jendral Sudirman, Rt. 18<br/>Loa Kulu Kota, Gang Hijrah II</span></li>
+          </ul>
+          <a href="https://maps.app.goo.gl/VT9GvHJUoGC5tX9i8" target="_blank" class="btn-maps">
+            <i class="fas fa-location-dot"></i> Google Maps
+          </a>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ============================= GALLERY ============================= -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-overlay-bg"></div>
+    <div class="container">
+      <div class="sec-head light">
+        <p class="sec-lbl">Kenangan Bersama</p>
+        <h2 class="sec-ttl">Galeri Foto</h2>
+        <div class="sec-div"></div>
+      </div>
+      <div class="gal-grid">
+        <!-- Baris 1: tall | normal | normal -->
+        <div class="g-item g-tall reveal" onclick="bukaBoks('galeri-1.jpg')">
+          <div class="g-inner"><img src="galeri-1.jpg" alt="Prewedding Teguh &amp; Fatma"/></div>
+          <div class="g-ov"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="g-item reveal" onclick="bukaBoks('galeri-2.jpg')">
+          <div class="g-inner"><img src="galeri-2.jpg" alt="Prewedding Teguh &amp; Fatma"/></div>
+          <div class="g-ov"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="g-item reveal" onclick="bukaBoks('galeri-3.jpg')">
+          <div class="g-inner"><img src="galeri-3.jpg" alt="Prewedding Teguh &amp; Fatma"/></div>
+          <div class="g-ov"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <!-- Baris 2: normal | normal | tall -->
+        <div class="g-item reveal" onclick="bukaBoks('galeri-4.jpg')">
+          <div class="g-inner"><img src="galeri-4.jpg" alt="Prewedding Teguh &amp; Fatma"/></div>
+          <div class="g-ov"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="g-item reveal" onclick="bukaBoks('galeri-5.jpg')">
+          <div class="g-inner"><img src="galeri-5.jpg" alt="Prewedding Teguh &amp; Fatma"/></div>
+          <div class="g-ov"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <div class="g-item g-tall reveal" onclick="bukaBoks('galeri-6.jpg')">
+          <div class="g-inner"><img src="galeri-6.jpg" alt="Prewedding Teguh &amp; Fatma"/></div>
+          <div class="g-ov"><i class="fas fa-expand-alt"></i></div>
+        </div>
+      </div>
+      <p class="gal-hint">📸 Foto prewedding Teguh &amp; Fatma — klik untuk memperbesar</p>
+    </div>
+    <div class="lightbox" id="lb" onclick="tutupBoks()">
+      <div class="lb-x"><i class="fas fa-times"></i></div>
+      <div class="lb-frame">
+        <img id="lbImg" src="" alt="Galeri" style="max-width:90vw;max-height:88vh;object-fit:contain;border-radius:8px;display:block;"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= GIFT ============================= -->
+  <section class="gift" id="gift">
+    <div class="gift-top-wave"></div>
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-lbl">Hadiah Pernikahan</p>
+        <h2 class="sec-ttl">Wedding Gift</h2>
+        <div class="sec-div"></div>
+        <p class="gift-intro">Doa dan kehadiran Anda adalah hadiah terindah bagi kami. Namun jika ingin memberikan tanda kasih, berikut caranya.</p>
+      </div>
+
+      <div class="gift-flex">
+
+        <div class="gift-card reveal">
+          <div class="gk-header">
+            <div class="bank-logo bni"><span>BCA</span></div>
+            <div class="gk-info">
+              <p class="gk-bankname">Bank Central Asia</p>
+              <p class="gk-banksub">Transfer via ATM / M-Banking</p>
+            </div>
+          </div>
+          <div class="gk-body">
+            <p class="gk-label">Nomor Rekening</p>
+            <p class="gk-number">8145302125</p>
+            <p class="gk-holder">a.n. Teguh Aji Pratama</p>
+          </div>
+          <button class="btn-salin" onclick="salinRek('8145302125','t1')">
+            <i class="far fa-copy"></i> Salin Nomor
+          </button>
+          <div class="salin-toast" id="t1">✓ Nomor berhasil disalin!</div>
+        </div>
+
+        <div class="gift-card reveal">
+          <div class="gk-header">
+            <div class="bank-logo sea"><span>DANA</span></div>
+            <div class="gk-info">
+              <p class="gk-bankname">DANA</p>
+              <p class="gk-banksub">Transfer via E-Wallet / M-Banking</p>
+            </div>
+          </div>
+          <div class="gk-body">
+            <p class="gk-label">Nomor Rekening</p>
+            <p class="gk-number">0822-5463-7785</p>
+            <p class="gk-holder">a.n. Fatma Yanti</p>
+          </div>
+          <button class="btn-salin" onclick="salinRek('082254637785','t2')">
+            <i class="far fa-copy"></i> Salin Nomor
+          </button>
+          <div class="salin-toast" id="t2">✓ Nomor berhasil disalin!</div>
+        </div>
+
+        <div class="gift-card gift-wa reveal">
+          <div class="gift-wa-icon"><i class="fab fa-whatsapp"></i></div>
+          <h4>Konfirmasi Pengiriman</h4>
+          <p>Setelah transfer, mohon konfirmasi via WhatsApp agar kami dapat mengucapkan terima kasih.</p>
+          <a href="https://wa.me/6282254637785?text=Halo%20Teguh%20%26%20Fatma%2C%20saya%20telah%20mengirimkan%20hadiah." target="_blank" class="btn-wa-link">
+            <i class="fab fa-whatsapp"></i> Konfirmasi via WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="footer" id="footer">
+    <div class="footer-wave-top"></div>
+    <div class="footer-inner">
+      <div class="ft-emblem">
+        <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
+          <circle cx="45" cy="45" r="43" stroke="rgba(205,170,128,0.2)" stroke-width="1"/>
+          <circle cx="45" cy="45" r="34" stroke="rgba(205,170,128,0.1)" stroke-width="0.8" stroke-dasharray="3 5"/>
+          <text x="45" y="40" text-anchor="middle" fill="#cdaa80" font-size="15" font-family="Playfair Display" font-style="italic" opacity="0.85">T &amp; F</text>
+          <text x="45" y="57" text-anchor="middle" fill="rgba(205,170,128,0.35)" font-size="9" font-family="Raleway" letter-spacing="3">WEDDING</text>
+        </svg>
+      </div>
+      <h2 class="ft-names">Teguh &amp; Fatma</h2>
+      <p class="ft-date">Minggu, 5 April 2026</p>
+      <p class="ft-loc"><i class="fas fa-map-marker-alt"></i> Gg. Hijrah II, Loa Kulu Kota, Kec. Loa Kulu, Kabupaten Kutai Kartanegara, Kalimantan Timur</p>
+      <div class="ft-orn"><span></span><i class="fas fa-heart"></i><span></span></div>
+      <p class="ft-doa">"Ya Allah, berkahilah pernikahan kami, satukanlah hati kami dalam kebaikan, dan jadikanlah rumah tangga kami penuh kasih sayang dan kebahagiaan."</p>
+      <div class="ft-socials">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <nav class="ft-nav">
+        <a href="#opening">Pembuka</a><span>·</span>
+        <a href="#couple">Mempelai</a><span>·</span>
+        <a href="#event">Acara</a><span>·</span>
+        <a href="#gallery">Galeri</a><span>·</span>
+        <a href="#gift">Hadiah</a>
+      </nav>
+      <p class="ft-copy">© 2026 Undangan Pernikahan Teguh &amp; Fatma · Made with <i class="fas fa-heart" style="color:#cdaa80"></i></p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const el = document.querySelector(a.getAttribute('href'));
+        if (el) { e.preventDefault(); el.scrollIntoView({ behavior:'smooth' }); }
+      });
+    });
+
+    // Nav toggle mobile
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('open');
+      document.getElementById('navToggle').classList.toggle('x');
+    }
+    function closeNav() {
+      document.getElementById('navLinks').classList.remove('open');
+      document.getElementById('navToggle').classList.remove('x');
+    }
+
+    // Countdown WITA (UTC+8)
+    const target = new Date('2026-04-05T10:30:00+08:00');
+    function tick() {
+      const diff = target - new Date();
+      if (diff <= 0) { document.getElementById('countdown').innerHTML = '<p class="cd-done">🎉 Hari Bahagia Telah Tiba!</p>'; return; }
+      const pad = n => String(n).padStart(2,'0');
+      document.getElementById('cDays').textContent  = pad(Math.floor(diff/86400000));
+      document.getElementById('cHours').textContent = pad(Math.floor((diff%86400000)/3600000));
+      document.getElementById('cMins').textContent  = pad(Math.floor((diff%3600000)/60000));
+      document.getElementById('cSecs').textContent  = pad(Math.floor((diff%60000)/1000));
+    }
+    tick(); setInterval(tick, 1000);
+
+    // Bintang hero
+    const sc = document.getElementById('heroStars');
+    for (let i = 0; i < 50; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const sz = 1 + Math.random() * 2.5;
+      s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;width:${sz}px;height:${sz}px;animation-delay:${Math.random()*8}s;animation-duration:${3+Math.random()*5}s`;
+      sc.appendChild(s);
+    }
+
+    // Scroll reveal
+    const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); }), { threshold:.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // RSVP
+    function kirimRSVP(e) {
+      e.preventDefault();
+      e.target.style.display = 'none';
+      document.getElementById('rsvpDone').style.display = 'flex';
+    }
+
+    // Gallery lightbox
+    function bukaBoks(src) {
+      if (src) document.getElementById('lbImg').src = src;
+      document.getElementById('lb').classList.add('show');
+    }
+    function tutupBoks() { document.getElementById('lb').classList.remove('show'); }
+
+    // Copy rekening
+    function salinRek(num, id) {
+      navigator.clipboard.writeText(num).then(() => {
+        const t = document.getElementById(id);
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2200);
+      });
+    }
+
+    // Musik toggle
+    let isPlaying = false;
+    function toggleMusic() {
+      const music = document.getElementById("music");
+      const icon = document.getElementById("musicIcon");
+
+      if (music.paused) {
+        music.play();
+        icon.className = "fas fa-pause";
+      } else {
+        music.pause();
+        icon.className = "fas fa-music";
+      }
+    }
+  </script>
+</body>
+</html>
